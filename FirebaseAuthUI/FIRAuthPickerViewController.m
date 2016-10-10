@@ -90,6 +90,9 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
       kSignInButtonHeight * numberOfButtons + kSignInButtonVerticalMargin * (numberOfButtons - 1);
   CGRect buttonContainerViewFrame = CGRectMake(0, 0, kSignInButtonWidth, buttonContainerViewHeight);
   _buttonContainerView = [[UIView alloc] initWithFrame:buttonContainerViewFrame];
+  UIImageView imagy = UIImageView(frame: CGRectMake(0, 0, UIScreen.main.bounds.size.width, UIScreen.main.bounds.height));
+  imagy.image = UIImage(named: "bizzybooksbee");
+  [self.view addSubview:imagy];
   [self.view addSubview:_buttonContainerView];
 
   CGRect buttonFrame = CGRectMake(0, 0, kSignInButtonWidth, kSignInButtonHeight);
